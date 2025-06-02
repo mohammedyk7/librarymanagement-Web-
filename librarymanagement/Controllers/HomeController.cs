@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using librarymanagement.Models;
 
@@ -19,6 +19,12 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    // ✅ Add this to enable the Dashboard view
+    public IActionResult Dashboard()
     {
         return View();
     }

@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using LibraryManagementSystem.Data;
 
 namespace librarymanagement
@@ -32,9 +32,10 @@ namespace librarymanagement
 
             app.UseAuthorization();
 
+            // ✅ Set Dashboard as the homepage
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Dashboard}/{id?}");
 
             app.Run();
         }
